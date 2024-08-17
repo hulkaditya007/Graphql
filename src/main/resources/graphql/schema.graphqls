@@ -1,0 +1,18 @@
+type Student {
+  
+  studentId: ID
+  studentName: String
+  className: String
+  phoneNumber: String
+  address: String
+  
+}
+
+type Query {
+  getAllStudents: [Student]
+  getStudentById(id: ID!): Student
+}
+
+type Mutation {
+    createUser(studentName: String!, className: String!, phoneNumber: String!, address: String!): Student
+}
